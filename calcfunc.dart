@@ -1,4 +1,5 @@
 import 'dart:io';
+
 int mult(int x, int y){
   int res = x * y;
   return res;
@@ -33,3 +34,4 @@ void main(){
     print("Invalid option");
   }
 }
+
