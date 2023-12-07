@@ -1,8 +1,8 @@
 void main() {
   String greeting = "Hello";
 
-  String greeting2 = "World";
+  String greeting2 = " World";
   print(
-    greeting + greeting2
+   "the greeting is: ${greeting + greeting2}"
   );
 }
