@@ -1,6 +1,6 @@
 import "dart:io";
 String? prompt(String promptText) {
-  print(promptText);
+  print("The promptText is: ${promptText}");
   String? answer = stdin.readLineSync();
   return answer;
 }
@@ -8,6 +8,6 @@ String? prompt(String promptText) {
 void main() {
   
   String? color = prompt("Enter a color:");
-  print("The color is ${color}");
+  String? pluralnoun = prompt("Enter a plural noun:");
+  String? celebrity = prompt("Enter a celebrity:");
 }
-
