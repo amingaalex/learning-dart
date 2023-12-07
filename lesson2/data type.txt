@@ -4,3 +4,8 @@ double age = 3.5;
 bool isRegisteredvoter = false;
 
 print(isRegisteredvoter);
+
+
+FUNCTION
+
+is a collection of codes used multiple times
