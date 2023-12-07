@@ -1,4 +1,4 @@
-import "dart:math";
+
 import "dart:io";
 void main() {
   print("Enter first number:");
@@ -6,8 +6,7 @@ void main() {
   print("Enter second number:");
   String? num2 = stdin.readLineSync();
 
-print(
- num1 + num2 
-);
+print( int.parse(num1!) + int.parse(num2!));
+
 
 }
