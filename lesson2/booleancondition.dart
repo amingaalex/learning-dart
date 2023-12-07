@@ -1,7 +1,7 @@
 void main() {
 bool issmart = true;
 
-if(issmart) {
+if(3>5) {
   print("You are smart");
 }else {
   print("you should study more");
