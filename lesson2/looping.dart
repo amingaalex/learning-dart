@@ -12,11 +12,13 @@ void main() {
 
   String answer = "Alex";
   String guess = "";
+  int guessCount = 0;
 
-  while(guess!=answer) {
-  guess = prompt("Enter a guess:");  
+  while(guess !=answer) {
+  guess = prompt("Enter a guess:"); 
+  guessCount++;
 }
 
-print("You Won!");
+print("You Won in ${guessCount}guesses!");
 
 }
