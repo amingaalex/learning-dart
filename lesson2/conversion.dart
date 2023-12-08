@@ -17,15 +17,22 @@ void main() {
   double num2 = promptDouble();
   String? op = prompt("Enter an operation(+,-,*,/):");
 
-  if(op == "+") {
-    print(num1 + num2);}
-  else if(op == "-") {
-    print(num1 - num2);}
-  else if(op == "*") {
-    print(num1 * num2);}
-  else if(op == "/") {
-    print(num1 / num2);}
-  else {
-    print("Invalid operator");
+  
+
+  switch(op) {
+    case "+":
+    print(num1 + num2);
+    break;
+    case "*":
+    print(num1 * num2);
+    break;
+    case "-":
+    print(num1 - num2);
+    break;
+    case "/":
+    print(num1 / num2);
+    break;
+default:
+print("Invalid operation");
   }
 }
