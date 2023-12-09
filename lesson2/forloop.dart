@@ -4,7 +4,7 @@ void main() {
 
 int i = 0;
 while(i < friends.length) {
-  print(friends[i].toupperCase());
+  print(friends[i].toUpperCase());
   i++;
 }
 }

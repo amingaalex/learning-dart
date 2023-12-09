@@ -1,58 +1,71 @@
 import 'dart:io';
 
 class User {
-  String fullname;
-  String password;
-  String email;
+  String? fullname;
+  String? password;
+  String? email;
 
   User(this.fullname, this.password, this.email);
+  
+  get username => null;
 }
+  List<User>users = [];
 
-List<User> users = [];
-
-void doctorUser() {
+  void registerUser() {
   stdout.write('Enter your username: ');
-  String fullname = stdin.readLineSync()!;
+  String username = stdin.readLineSync()!;
   stdout.write('Enter your password: ');
   String password = stdin.readLineSync()!;
   stdout.write('Enter your email: ');
   String email = stdin.readLineSync()!;
 
-  users.add(User(fullname, password, email));
+  users.add(User(username, password, email));
 
-  print('User login successfully!\n');
+  print('User registered successfully!\n');
 }
 
-User? logindoctorUser() {
-  stdout.write('Enter your fullname: ');
-  String fullname = stdin.readLineSync()!;
+User? loginUser() {
+  stdout.write('Enter your username: ');
+  String username = stdin.readLineSync()!;
   stdout.write('Enter your password: ');
   String password = stdin.readLineSync()!;
 
   for (User user in users) {
-   if (user.fullname == fullname && user.password == password) {
-      print('Welcome, ${user.fullname}!');
+    if (user.username == username && user.password == password) {
+      print('Welcome, ${user.username}!');
       return user;
     }
   }
+
+  print('Login failed. Invalid username or password.\n');
+  return null;
+}
+
+void displayUsers(List<User> users) {
+  print('\nList of registered users:');
+  for (User user in users) {
+    print('Username: ${user.username}, Email: ${user.email}');
+  }
+}
+
 void main() {
   int choice;
 
   do {
     print('Options:');
-    print('1. doctor');
-    print('2. logindoctor');
+    print('1. Register');
+    print('2. Login');
     print('3. Exit');
     print('Enter your choice: ');
 
     choice = int.parse(stdin.readLineSync()!);
 
-      switch (choice) {
+    switch (choice) {
       case 1:
-        doctorUser();
+        registerUser();
         break;
       case 2:
-        User? loggedInUser = logindoctorUser();
+        User? loggedInUser = loginUser();
         if (loggedInUser != null) {
           displayUsers(users);
         }
@@ -67,8 +80,4 @@ void main() {
   } while (choice != 3);
 }
 
-}
 
-void displayUsers(List<User> users) {
-  return null;
-}

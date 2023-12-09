@@ -1,3 +1,5 @@
+// ignore_for_file: dead_code
+
 void main() {
 
   bool issmart = false;
@@ -7,7 +9,7 @@ void main() {
   print("you are smart a student");
 }else if(issmart && !isstudent){
   print("you are not smart but a student");
-}else if(!issmart && is student){
+}else if(!issmart && isstudent){
   print("you are nost a smart student");
 }else{
 }

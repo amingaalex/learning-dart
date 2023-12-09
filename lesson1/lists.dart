@@ -2,7 +2,7 @@
 
 void main() {
 
- List<bool> favnums = [2, 6, 8, 10]; 
+ List<void> favnums = [true, 6, null, "test"]; 
 
  print(
   favnums.contains(10)

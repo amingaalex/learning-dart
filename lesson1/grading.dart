@@ -1,9 +1,8 @@
-import 'dart:io';
 void main() {
 print("enter your marks:");
-var grade = stdin.readLineSync();
+var grade = 20;
 
-  if(grade > 80){
+  if(grade> 80){
     print("you got A grade");
   }
   else if(grade > 70){
