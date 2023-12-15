@@ -3,7 +3,7 @@ void main() {
 //Lists
 var mylist = [1,2,3,4,5,6,7,8,9,10];
 print(mylist);
-print(mylist{0});
+print(mylist[0]);
 //Change an item
 mylist[0] = 100;
 print(mylist);
@@ -16,8 +16,7 @@ emptylist.add(100);
 print(emptylist);
 
 //Add multiplle to empty list
-emptylist.addAll(1,2,3);
-print(emptylist);
+
 //Insert at specific position (position, item)
 mylist.insert(3,900);
 print(mylist);
